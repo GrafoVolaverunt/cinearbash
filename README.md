@@ -8,4 +8,12 @@ El script necesita curl, hlsdl y jq para funcionar
 
 ## ¿Como usar el script?
 Primero tenés que abrir el archivo cinear.cfg donde e ingresar tu usuario y contraseña de cine.ar.
-Una vez hecho esto, ejecuta el script y te va a pedir que ingreses 2 numero SID, uno para comenzar y otro para terminar (el numero que identifica cada producción del sitio) una vez ingresado el script comienza a buscar las peliculas una por una.
+
+Una vez hecho esto, el script está listo para ser ejecutado.
+
+El número SID que pide es el numero que identifica cada produccion en el sitio, lo podes encontrar en la URL cada vez que entras a ver una pelicula.
+
+Por ejemplo:
+```
+https://play.cine.ar/INCAA/produccion/8026
+```

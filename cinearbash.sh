@@ -158,7 +158,19 @@ get_user_pid
 
 read -p "SID inicial: " start_number
 read -p "SID final: " end_number
+read -p "Ingresar el maximo de peliculas para descargar al mismo tiempo: " concurrent_limit
+
+current_jobs=0
+
 for ((sid = start_number; sid <= end_number; sid++)); do
 echo -e "Comenzando la descarga de SID:${sid}"
-get_production_info "$sid"
+get_production_info "$sid"  &  # Send the job to the background
+
+    ((current_jobs++))
+    if ((current_jobs >= concurrent_limit)); then
+        wait -n  # Wait for at least one job to finish before continuing
+        ((current_jobs--))
+    fi
 done
+wait  # Wait for all background jobs to finish
+echo "terminado"

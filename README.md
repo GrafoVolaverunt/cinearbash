@@ -17,3 +17,6 @@ Por ejemplo:
 ```
 https://play.cine.ar/INCAA/produccion/8026
 ```
+
+## IMPORTANTE:
+Cuando el script te pregunte acerca de cuantas pelis bajar al mismo tiempo recomiendo no poner numeros demasiado grandes. Por lo que probe hasta ahora de a 5 funciona bien
